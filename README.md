@@ -1,89 +1,87 @@
-# 🎓 Student Marks Predictor
+# 💰 Insurance Charges Predictor
 
-A Machine Learning project that predicts student marks based on study hours using **Linear Regression**. This project demonstrates the fundamentals of supervised learning, data preprocessing, model training, and prediction.
+A Machine Learning project that predicts medical insurance charges based on individual attributes such as age, BMI, smoking status, and more. This project demonstrates regression techniques, data preprocessing, and feature engineering using real-world data.
 
 ---
 
 ## 🚀 Project Overview
 
-The goal of this project is to build a simple predictive model that estimates a student's marks based on the number of hours they study. It serves as an introduction to core Machine Learning concepts and workflows.
+The objective of this project is to build a predictive model that estimates a person's medical insurance cost based on their personal and health-related information. This is a **regression problem**, where the output is a continuous numerical value.
 
 ---
 
-## 🧠 Concepts Covered
+## 🧠 Key Concepts Applied
 
-* Supervised Learning
-* Regression (Linear Regression)
+* Supervised Learning (Regression)
+* Feature Engineering
+* One-Hot Encoding (Categorical Variables)
 * Train-Test Split
-* Model Training using Scikit-learn
-* Prediction & Evaluation
+* Model Training & Evaluation
 
 ---
 
-## 📊 Dataset
+## 📊 Dataset Description
 
-The dataset used in this project is a small sample containing:
+The dataset contains the following features:
 
-* **Hours Studied** (Input Feature)
-* **Marks Obtained** (Target Variable)
+* `age` → Age of the individual
+* `sex` → Gender (male/female)
+* `bmi` → Body Mass Index
+* `children` → Number of dependents
+* `smoker` → Smoking status (yes/no)
+* `region` → Residential area
 
-Example:
+### 🎯 Target Variable
 
-| Hours | Marks |
-| ----- | ----- |
-| 1     | 35    |
-| 2     | 50    |
-| 3     | 65    |
-| 4     | 70    |
-| 5     | 90    |
+* `charges` → Medical insurance cost (continuous value)
 
 ---
 
 ## ⚙️ Tech Stack
 
 * Python 🐍
-* NumPy
-* Pandas
-* Matplotlib / Seaborn
+* Pandas & NumPy
+* Matplotlib & Seaborn
 * Scikit-learn
 
 ---
 
 ## 🔍 Model Used
 
-* **Linear Regression**
-
-The model learns the relationship between study hours and marks, and predicts marks for new input values.
+* Linear Regression *(primary model)*
+* (Optional: Polynomial Regression / Ridge / Lasso if implemented)
 
 ---
 
-## 📈 How It Works
+## 📈 Workflow
 
-1. Load and prepare the dataset
-2. Split data into training and testing sets
-3. Train the Linear Regression model
-4. Make predictions
-5. Evaluate the results
+1. Data Loading
+2. Data Cleaning & Preprocessing
+3. Encoding categorical variables (One-Hot Encoding)
+4. Exploratory Data Analysis (EDA)
+5. Train-Test Split
+6. Model Training
+7. Prediction & Evaluation
 
 ---
 
 ## 🧪 Example Prediction
 
-```python
-model.predict([[6]])
+```python id="0t9vdl"
+model.predict([[25, 0, 28.5, 2, 1, 3]])
 ```
 
-👉 Predicts marks for a student who studies 6 hours.
+👉 Predicts insurance charges for a given individual profile.
 
 ---
 
 ## 📂 Project Structure
 
-```
-student-marks-predictor/
+```id="7cs4d1"
+insurance-charges-predictor/
 │
-├── SupervisedLearning.ipynb   # Main notebook
-├── README.md                 # Project documentation
+├── insaurance_charge_predictor.ipynb   # Main notebook
+├── README.md                          # Documentation
 ```
 
 ---
@@ -92,46 +90,53 @@ student-marks-predictor/
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/your-username/student-marks-predictor.git
+```bash id="r6fxjm"
+git clone https://github.com/your-username/insurance-charges-predictor.git
 ```
 
 2. Navigate to the project folder:
 
-```bash
-cd student-marks-predictor
+```bash id="bcndts"
+cd insurance-charges-predictor
 ```
 
 3. Install dependencies:
 
-```bash
+```bash id="0d0a3j"
 pip install numpy pandas matplotlib seaborn scikit-learn
 ```
 
-4. Run the Jupyter Notebook:
+4. Run the notebook:
 
-```bash
+```bash id="h3pt46"
 jupyter notebook
 ```
 
 ---
 
-## 🎯 Learning Outcome
+## 📊 Evaluation Metrics
 
-This project helped in understanding:
+* Mean Absolute Error (MAE)
+* Mean Squared Error (MSE)
+* R² Score
 
-* How Machine Learning models are trained
-* Difference between input features and target variables
-* How predictions are made using real data
+---
+
+## 🎯 Learning Outcomes
+
+* Understanding regression problems
+* Working with real-world datasets
+* Handling categorical and numerical data
+* Building predictive cost models
 
 ---
 
 ## 🚀 Future Improvements
 
-* Add more features (sleep, practice, etc.)
-* Use advanced models
-* Deploy as a web app using Flask/React
-* Integrate with a frontend UI
+* Feature scaling (Standardization)
+* Hyperparameter tuning
+* Model comparison (Random Forest, XGBoost)
+* Deployment using Flask/React
 
 ---
 
@@ -141,6 +146,6 @@ This project helped in understanding:
 
 ---
 
-## ⭐ Contribute / Feedback
+## ⭐ Contributions
 
-Feel free to fork this repo, suggest improvements, or connect with me for collaboration.
+Feel free to fork, improve, or suggest enhancements!
